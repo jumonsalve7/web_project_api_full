@@ -1,0 +1,89 @@
+.infotooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Asegura que esté por encima de todo */
+
+  /* Estado inicial oculto */
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Clase para mostrarlo */
+.infotooltip_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* La tarjeta blanca central */
+.infotooltip__container {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 430px;
+  max-width: 90%;
+  padding: 60px 36px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* El icono (Check o X) */
+.infotooltip__icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 32px;
+  object-fit: contain;
+}
+
+/* El texto de éxito/error */
+.infotooltip__message {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: 0;
+}
+
+/* El botón de cerrar (la X de arriba a la derecha) */
+.infotooltip__close {
+  position: absolute;
+  top: -40px; /* Ajusta según tu diseño, a veces va fuera del cuadro blanco */
+  right: -40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  z-index: 10001; /* La X debe estar por encima de la tarjeta */
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.infotooltip__close:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 600px) {
+  .infotooltip__close {
+    top: -35px;
+    right: 5px;
+  }
+}

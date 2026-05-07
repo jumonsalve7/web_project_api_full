@@ -1,0 +1,80 @@
+.photo {
+  /* display: none; */
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.photo__container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+}
+
+.photo__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 35px;
+  flex-shrink: 0;
+}
+
+.photo__overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-active {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.photo__close {
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  background-color: transparent;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  display: none;
+}
+
+.photo__close:hover {
+  opacity: 0.5;
+}
+
+.photo__submit {
+  cursor: pointer;
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.photo__submit:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 535px) {
+  .photo__close {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+  }
+}

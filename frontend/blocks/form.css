@@ -1,0 +1,104 @@
+.form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.form__container {
+  position: relative;
+  width: 100%;
+}
+
+.form__group {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  gap: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 35px;
+  flex-shrink: 0;
+}
+
+.form__overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-active {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.form__close {
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  background-color: transparent;
+  position: absolute;
+  right: 50px;
+  top: -40px;
+  display: none;
+}
+
+.form__close:hover {
+  opacity: 0.5;
+}
+
+.form__placeholder {
+  border: none;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  line-height: 25px;
+}
+
+.form__submit {
+  cursor: pointer;
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.form__submit:not(:disabled):hover {
+  opacity: 0.5;
+}
+
+.form__submit:disabled {
+  background-color: white;
+  cursor: default;
+  color: gray;
+}
+
+.form__input-error {
+  display: none;
+}
+
+.form__input-error_active {
+  display: inline;
+  color: red;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 535px) {
+  .form__close {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+  }
+}

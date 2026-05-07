@@ -1,0 +1,83 @@
+.formadd {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.formadd__container {
+  position: relative;
+  width: 100%;
+}
+
+.formadd__group {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  gap: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 35px;
+  flex-shrink: 0;
+}
+
+.formadd__overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.formadd-active {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.formadd__close {
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  background-color: transparent;
+  position: absolute;
+  right: 50px;
+  top: -40px;
+  display: none;
+}
+
+.formadd__close:hover {
+  opacity: 0.5;
+}
+
+.formadd__submit {
+  cursor: pointer;
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.formadd__submit:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 535px) {
+  .formadd__close {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+  }
+}

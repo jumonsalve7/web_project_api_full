@@ -1,0 +1,83 @@
+.cards__list {
+  max-width: 880px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: auto;
+}
+
+.cards__content {
+  max-width: 282px;
+  width: 100%;
+  max-height: 361px;
+  position: relative;
+}
+
+.cards__content-image {
+  max-width: 282px;
+  width: 100%;
+  height: 282px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.cards__content-image:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.cards__content-trash {
+  border: none;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  background: url(../src/assets/images/trash.png) center no-repeat;
+  position: absolute;
+}
+
+.cards__content-trash:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cards__content-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 282px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+}
+
+.cards__content-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cards__content-like {
+  width: 25px;
+  height: 19px;
+  background: transparent url(../src/assets/images/Vector.jpg) no-repeat;
+  background-size: 21px 18px;
+  border: none;
+}
+
+.cards__content-like:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.cards__content-like_active {
+  background: url(../src/assets/images/blackHearth.png) no-repeat;
+}

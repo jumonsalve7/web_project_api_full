@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/Inter-Black.woff2") format("woff2")
+    url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page {
+  max-width: 1280px;
+  margin: auto;
+  background-color: #000000;
+  color: white;
+  font-family: "inter", sans-serif;
+
+}
