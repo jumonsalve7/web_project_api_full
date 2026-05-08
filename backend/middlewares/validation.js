@@ -1,5 +1,5 @@
-const { celebrate, Joi } = require("celebrate");
-const validator = require("validator");
+const { celebrate, Joi } = require('celebrate');
+const validator = require('validator');
 
 // 🔗 validar URLs
 const validateURL = (value, helpers) => {
@@ -7,7 +7,7 @@ const validateURL = (value, helpers) => {
     return value;
   }
 
-  return helpers.error("string.uri");
+  return helpers.error('string.uri');
 };
 
 // ✅ signup

@@ -11,7 +11,11 @@ const PORT = 3000;
 const errorHandler = require('./middlewares/errorHandler');
 const { errors } = require("celebrate");
 const { requestLogger, errorLogger } = require("./utils/logger");
+const cors = require('cors');
 
+
+app.use(cors());
+app.options('*', cors());
 app.use(express.json());
 app.use(requestLogger);
 
