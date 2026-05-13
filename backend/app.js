@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(requestLogger);
 
 
-mongoose.connect(process.env.DB_URL)
+mongoose.connect('mongodb://localhost:27017/aroundb')
   .then(() => console.log('Conectado a MongoDB'))
   .catch((err) => console.error('Error al conectar a MongoDB:', err));
 
