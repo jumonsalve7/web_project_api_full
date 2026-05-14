@@ -1,6 +1,6 @@
 import { getToken } from "./token";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "/api";
 
 class Api {
   constructor(options) {
