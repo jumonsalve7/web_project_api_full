@@ -1,4 +1,5 @@
-export const BASE_URL = "https://se-register-api.en.tripleten-services.com/v1";
+
+export const BASE_URL = "https://socialmed.vitdam.org";
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {
