@@ -1,9 +1,6 @@
 import { getToken } from "./token";
 
-const BASE_URL =
-  window.location.hostname === "localhost"
-    ? "http://localhost:3000"
-    : "https://socialmed.vitdam.org";
+const BASE_URL = "https://socialmed.vitdam.org";
 
 class Api {
   constructor(options) {
