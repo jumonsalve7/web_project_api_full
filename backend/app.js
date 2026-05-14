@@ -3,16 +3,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { errors } = require('celebrate');
+const { requestLogger, errorLogger } = require('./utils/logger'); // Logger también arriba
 
-// Importaciones de rutas y middlewares
+const app = express(); 
+
+// 🏁 AHORA IMPORTA LOS CONTROLADORES Y RUTAS
 const { createUser, login } = require('./controllers/users');
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const auth = require('./middlewares/auth');
 const errorHandler = require('./middlewares/errorHandler');
-const { requestLogger, errorLogger } = require('./utils/logger');
 
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Configuración de CORS
