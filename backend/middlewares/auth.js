@@ -1,27 +1,25 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
-const JWT_SECRET =
-  process.env.JWT_SECRET || "desarrollo-secreto-super-seguro-2024";
+const JWT_SECRET = 'desarrollo-secreto-super-seguro-2024';
 
-const auth = (req, res, next) => {
+module.exports = (req, res, next) => {
   const { authorization } = req.headers;
 
-  if (!authorization || !authorization.startsWith("Bearer ")) {
-    return res.status(403).send({ message: "Acceso denegado" });
+  if (!authorization || !authorization.startsWith('Bearer ')) {
+    return res.status(403).send({ message: 'Acceso denegado: No hay token' });
   }
 
-  const token = authorization.replace("Bearer ", "");
-
+  const token = authorization.replace('Bearer ', '');
   let payload;
 
   try {
-    payload = jwt.verify(token, "desarrollo-secreto-super-seguro-2024"); 
+    payload = jwt.verify(token, JWT_SECRET);
   } catch (err) {
-    return res.status(403).send({ message: "Acceso denegado" });
+    return res.status(403).send({ message: 'Acceso denegado: Token inválido' });
   }
 
   req.user = payload;
-  return next();
+  next();
 };
 
 module.exports = auth;
