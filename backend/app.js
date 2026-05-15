@@ -30,9 +30,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
-// Responder a las peticiones pre-flight (OPTIONS)
-app.options('(.*)', cors());
-
 app.use(express.json());
 
 // Logger de solicitudes (debe ir antes de las rutas)
