@@ -5,7 +5,7 @@ const cors = require('cors');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./utils/logger'); // Logger también arriba
 
-const app = express(); 
+const app = express();
 
 // 🏁 AHORA IMPORTA LOS CONTROLADORES Y RUTAS
 const { createUser, login } = require('./controllers/users');
@@ -31,7 +31,7 @@ app.use(cors({
 }));
 
 // Responder a las peticiones pre-flight (OPTIONS)
-app.options('*', cors());
+app.options('(.*)', cors());
 
 app.use(express.json());
 
