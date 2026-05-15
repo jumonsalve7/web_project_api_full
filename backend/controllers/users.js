@@ -2,7 +2,7 @@ const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const { JWT_SECRET = "dev-secret" } = process.env;
+const { JWT_SECRET = 'desarrollo-secreto-super-seguro-2024' } = process.env;
 
 // GET /users — obtener todos los usuarios
 const getUsers = (req, res, next) => {

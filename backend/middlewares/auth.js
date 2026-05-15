@@ -15,7 +15,7 @@ const auth = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, "desarrollo-secreto-super-seguro-2024"); // 👈 La misma clave
+    payload = jwt.verify(token, "desarrollo-secreto-super-seguro-2024"); 
   } catch (err) {
     return res.status(403).send({ message: "Acceso denegado" });
   }
